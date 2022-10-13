@@ -1,0 +1,22 @@
+{
+  "name": "virtualpet",
+  "version": "1.0.0",
+  "description": "My virtual pet!",
+  "main": "index.js",
+  "scripts": {
+    "test": "test --virtualpet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C-Marfil/virtual-pet.git"
+  },
+  "author": "CMarfil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/C-Marfil/virtual-pet/issues"
+  },
+  "homepage": "https://github.com/C-Marfil/virtual-pet#readme",
+  "devDependencies": {
+    "jest": "^29.1.2"
+  }
+}
