@@ -4,7 +4,7 @@
   "description": "My virtual pet!",
   "main": "index.js",
   "scripts": {
-    "test": "test --virtualpet"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
