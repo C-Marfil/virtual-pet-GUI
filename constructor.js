@@ -1,3 +1,3 @@
-function Pet (name) {
-    this.name = 'Fido'
-}
+// function Pet (name) {
+//     this.name = 'Fido'
+// }
