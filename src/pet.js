@@ -1,18 +1,23 @@
 // CONSTRUCTOR FOR PET OBJECTS //
+const PET_IS_BORN = 0;
+const MAXIMUM_HUNGER = 10;
+const MINIMUM_FITNESS = 0;
 
 function Pet(name) {
     this.name = name;
-    this.age = 0;
-    this.hunger = 0;
-    this.fitness = 10;
+    this.age = PET_IS_BORN;
+    this.hunger = MINIMUM_HUNGER;
+    this.fitness = MAXIMUM_FITNESS;
 };
 
 //GETTERS//
 //ISALIVE: Checks states to determine if pet is alive//
 
+const LIFESPAN = 30;
+
 Pet.prototype = {
     get isAlive() {
-      return this.age < 30 && this.hunger < 10 && this.fitness > 0;
+      return this.age < LIFESPAN && this.hunger < MAXIMUM_HUNGER && this.fitness > MINIMUM_FITNESS;
     }
   }
 
@@ -24,11 +29,14 @@ const SOFA_TIME = 3;
 const FASTING = 5;
 
 Pet.prototype.growUp = function(){
+    if (!this.isAlive) {
+        throw new Error('Your pet is no longer alive BIATCH!');
+    }
     this.age += A_YEAR;
     this.fitness -= SOFA_TIME;
     this.hunger += FASTING;
-    if(this.fitness <= 0) {
-        this.fitness = 0;
+    if(this.fitness <= MINIMUM_FITNESS) {
+        this.fitness = MINIMUM_FITNESS;
     }
 }
 
@@ -38,12 +46,18 @@ const MAXIMUM_FITNESS = 10;
 const A_WORKOUT = 4;
 
 Pet.prototype.walk = function(){
+    if (!this.isAlive) {
+        throw new Error('Your pet is no longer alive BIATCH!');
+    }
     this.fitness += A_WORKOUT;
     if(this.fitness > MAXIMUM_FITNESS) {
         this.fitness = MAXIMUM_FITNESS;
     }
 }
 Pet.prototype.PTSession = function(){
+    if (!this.isAlive) {
+        throw new Error('Your pet is no longer alive BIATCH!');
+    }
     this.fitness = MAXIMUM_FITNESS;
 }
 
@@ -53,12 +67,18 @@ const MINIMUM_HUNGER = 0;
 const A_SNACK = 3;
 
 Pet.prototype.feedASnack = function(){
+    if (!this.isAlive) {
+        throw new Error('Your pet is no longer alive BIATCH!');
+    }
     this.hunger -= A_SNACK;
     if(this.hunger < MINIMUM_HUNGER) {
         this.hunger = MINIMUM_HUNGER;
     }
 }
 Pet.prototype.feedAPizza = function(){
+    if (!this.isAlive) {
+        throw new Error('Your pet is no longer alive BIATCH!');
+    }
     this.hunger = MINIMUM_HUNGER;
 }
 
@@ -68,6 +88,9 @@ const HUNGER_DANGER = 3;
 const FITNESS_DANGER = 5;
 
 Pet.prototype.checkUp = function(){
+    if (!this.isAlive) {
+        throw new Error('Your pet is no longer alive BIATCH!');
+    }
     if(this.fitness <= FITNESS_DANGER && this.hunger >= HUNGER_DANGER) {
         return 'I am hungry AND I need a walk';
     } else if(this.fitness <= FITNESS_DANGER) {
@@ -78,6 +101,5 @@ Pet.prototype.checkUp = function(){
         return 'I feel great!';
     }
 }
-
 
 module.exports =  Pet;
