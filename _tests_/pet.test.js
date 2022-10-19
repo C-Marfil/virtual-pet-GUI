@@ -60,3 +60,49 @@ describe('The use of the feedASnack function', () => {
         expect(pet.hunger).toEqual(0);
     })
 })
+describe('The use of the checkup function', () => {
+    it('It tells you when it is hungry, low fitness, both or ok', () => {
+        const pet = new Pet('Fido');
+        pet.growUp();
+        pet.growUp();
+        pet.growUp();
+        expect(pet.checkUp()).toBe('I am hungry AND I need a walk')
+        const pet1 = new Pet('Fido');
+        pet1.growUp();
+        pet1.growUp();
+        pet1.feedASnack();
+        pet1.feedASnack();
+        pet1.feedASnack();
+        pet1.feedASnack();
+        expect(pet1.checkUp()).toBe('I need a walk')
+        const pet2 = new Pet('Fido');
+        pet2.growUp();
+        expect(pet2.checkUp()).toBe('I am hungry')
+        const pet3 = new Pet('Fido');
+        pet3.feedASnack();
+        expect(pet3.checkUp()).toBe('I feel great!')
+
+
+    })
+})
+describe('The getter isAlive', () => {
+    it('returns if pet is alive', () => {
+        const pet = new Pet('fido');
+        expect(pet.isAlive).toBe(true);
+        const pet1 = new Pet('Poo');
+        pet1.age = 30;
+        pet1.feedAPizza();
+        pet1.PTSession();
+        expect(pet1.isAlive).toBe(false);
+        const pet2 = new Pet('Sorra')
+        pet2.age = 20;
+        pet2.fitness = 0;
+        pet2.feedAPizza();
+        expect(pet2.isAlive).toBe(false);
+        const pet3 = new Pet('Luju');
+        pet3.age = 29;
+        pet3.hunger = 10;
+        pet3.PTSession();
+        expect(pet3.isAlive).toBe(false);
+    })
+})
