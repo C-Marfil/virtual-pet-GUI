@@ -44,4 +44,19 @@ describe('The use of the walk function', () => {
         expect(pet.fitness).toEqual(10);
     })
 });
-
+describe('The use of the feedASnack function', () => {
+    it('Checks that a snack lowers hunger by 3 and is never below 0', () => {
+        const pet = new Pet('Fido');
+        pet.growUp();
+        pet.growUp();
+        pet.growUp();
+        pet.feedASnack();
+        expect(pet.hunger).toEqual(12);
+        pet.feedASnack();
+        pet.feedASnack();
+        pet.feedASnack();
+        pet.feedASnack();
+        pet.feedASnack();
+        expect(pet.hunger).toEqual(0);
+    })
+})
