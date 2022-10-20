@@ -8,6 +8,7 @@ function Pet(name) {
     this.age = PET_IS_BORN;
     this.hunger = MINIMUM_HUNGER;
     this.fitness = MAXIMUM_FITNESS;
+    this.children = [];
 };
 
 //GETTERS//
@@ -102,4 +103,15 @@ Pet.prototype.checkUp = function(){
     }
 }
 
+//ADOPT A CHILD: The parent pet adopts another existing pet. //
+
+Pet.prototype.adoptChild = function(childToBe) {
+    this.children += childToBe;
+}
+
+//PREGNANCY: Actually have a baby that is the same instance as parent. //
+
+Pet.prototype.haveBaby = function(name) {
+     this.children.push(new Pet(name));
+}
 module.exports =  Pet;

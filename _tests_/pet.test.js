@@ -102,3 +102,21 @@ describe('The getter isAlive', () => {
         expect(pet3.isAlive).toBe(false);
     })
 });
+describe('The act of having babies', () => {
+    it('ADOPTION: Creates a new pet and adopts it as a child', () => {
+        const parent = new Pet('Dave');
+        const child = new Pet('Pololo');
+        
+        parent.adoptChild('Pololo');
+
+        expect(parent.children).toBe('Pololo');
+    })
+    it('PREGNANCY: Actually has a baby', () =>{
+        const parent = new Pet('Parent');
+
+        parent.haveBaby('Polola');
+
+        expect(parent.children[0].name).toBe('Polola');
+        expect(parent.children[0]).toBeInstanceOf(Object);
+    })
+})
