@@ -114,4 +114,13 @@ Pet.prototype.adoptChild = function(childToBe) {
 Pet.prototype.haveBaby = function(name) {
      this.children.push(new Pet(name));
 }
+
+//TIME: Playing with intervals. Don't know how to test it. //
+
+setInterval(function(){
+    if(isAlive){
+        growUp();
+    }
+}, 60000);
+
 module.exports =  Pet;
