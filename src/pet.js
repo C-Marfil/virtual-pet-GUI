@@ -10,7 +10,6 @@ function Pet(name) {
     this.fitness = MAXIMUM_FITNESS;
     this.children = [];
 };
-
 //GETTERS//
 //ISALIVE: Checks states to determine if pet is alive//
 
