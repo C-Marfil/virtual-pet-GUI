@@ -51,7 +51,7 @@ To give the virtual pet a go, follow these steps:
 
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git](https://github.com/C-Marfil/virtual-pet
+   git clone https://github.com/C-Marfil/virtual-pet
    ```
 3. Install NPM packages
    ```sh
