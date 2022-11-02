@@ -1,3 +1,5 @@
+
+(function exportShip() {
 // CONSTRUCTOR FOR PET OBJECTS //
 const PET_IS_BORN = 0;
 const MAXIMUM_HUNGER = 10;
@@ -121,5 +123,9 @@ Pet.prototype.adoptChild = function(childToBe) {
 Pet.prototype.haveBaby = function(name) {
      this.children.push(new Pet(name));
 };
-
-module.exports =  Pet;
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Pet;
+    } else {
+     window.Pet = Pet;
+    }
+}());

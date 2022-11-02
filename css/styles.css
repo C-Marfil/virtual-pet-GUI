@@ -1,0 +1,54 @@
+/* GENERAL STYLES */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;    
+}
+
+/* VIEWPORT STYLES */
+
+#viewport {
+    width: 640px;
+    height: 400px;
+    position: relative;
+    overflow-x: auto;
+    background-size: 100%;
+    background-repeat:no-repeat;
+    background-image: url('../images/petFlat.png');
+}
+
+/* PET STYLES */
+#divPet {
+    width:128px;
+    height:64px;
+    position: absolute;
+}
+
+#pet {
+    display: flex;
+    width: 15%;
+    padding-left:40%;
+    padding-top:13%;
+}
+
+#petStart {
+    color: pink;
+}
+
+#message {
+ color: white;
+}
+
+#fitness {
+    padding-bottom: 30%;
+    width: 40%;
+    height: 15%;
+    background-repeat: no-repeat;
+	background-image: url('../images/10fitness.png')
+}

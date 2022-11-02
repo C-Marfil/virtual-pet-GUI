@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.ss">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>My Virtual Pet</title>
+
+</head>
+
+<body>
+    
+    <div id="viewport">
+        <div id="divMessage"></div>
+        <img id='pet' src="images/pet.png">
+    </div>
+    <div id="fitness"></div>
+<button id="petStart">Give Birth!</button>
+<script src="src/controller.js"></script>
+<script src="src/pet.js"></script>
+<script>
+    const pet = new Pet('Fido');
+    const controller = new Controller(pet);
+
+    controller.initialisePet();
+</script>
+</body>
+</html>
