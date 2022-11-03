@@ -28,7 +28,7 @@ Pet.prototype = {
 
 const A_YEAR = 1;
 const SOFA_TIME = 3;
-const FASTING = 5;
+const FASTING = 3;
 
 Pet.prototype.growUp = function(){
     if (!this.isAlive) {

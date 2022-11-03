@@ -22,19 +22,20 @@ describe('constructor', () => {
     describe('test the growUp function', () => {
         it('increments age of the pet by 1', () => {
             pet.growUp();
+            pet.growUp();
             
-            expect(pet.age).toEqual(1);
+            expect(pet.age).toEqual(2);
         });
         it('checks how growUp modifies fitness and hunger', () => {
             pet.growUp();
             
             expect(pet.fitness).toEqual(7);
-            expect(pet.hunger).toEqual(5);
+            expect(pet.hunger).toEqual(3);
            
             pet.growUp();
             
             expect(pet.fitness).toEqual(4);
-            expect(pet.hunger).toEqual(10);
+            expect(pet.hunger).toEqual(6);
         });
     });
     describe('The use of the walk function', () => {

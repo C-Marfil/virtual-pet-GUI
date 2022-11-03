@@ -1,7 +1,6 @@
 (function exportController() {
     function Controller (pet) {
         this.pet = pet;
-        this.initialisePet();
         
 };
 Controller.prototype = {
@@ -21,6 +20,31 @@ Controller.prototype = {
         if (this.pet.fitness === 1) {
             getFitnessStyle.backgroundImage = `url('../images/1fitness.png')`;
         };
+        if (this.pet.isAlive === false) {
+            getFitnessStyle.backgroundImage = `url('../images/death.png')`;
+            getFitnessStyle.backgroundSize = '100%';
+        };
+        },
+
+    lowerHunger() {
+        const getHunger = document.getElementById('hunger');
+        let getHungerStyle = getHunger.style;
+        if (this.pet.hunger === 0) {
+                getHungerStyle.backgroundImage = `url('../images/0hunger.png')`;
+        };
+        if (this.pet.hunger === 3) {
+                getHungerStyle.backgroundImage = `url('../images/3hunger.png')`;
+        };
+        if (this.pet.hunger === 6) {
+                getHungerStyle.backgroundImage = `url('../images/6hunger.png')`;
+        };
+        if (this.pet.hunger === 9) {
+                getHungerStyle.backgroundImage = `url('../images/9hunger.png')`;
+        };
+        if (this.pet.isAlive === false) {
+                getHungerStyle.backgroundImage = `url('../images/death.png')`;
+                getHungerStyle.backgroundSize = '100%';
+        };
         },
 
     renderMessage(message) {
@@ -37,15 +61,15 @@ Controller.prototype = {
 
 initialisePet() {
 const pet = this.pet;
-
 const intervalGrow = window.setInterval(() => {
     if(pet.isAlive === false){
         window.clearInterval(intervalGrow);
     };
     console.log('I am growing');
     this.renderMessage(`Your pet is now ${pet.age} years old!`);
-    this.pet.growUp();
+    pet.growUp();
     this.lowerFitness();
+    this.lowerHunger();
 }, 5000);
 },
 };

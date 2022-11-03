@@ -46,9 +46,32 @@ body {
 }
 
 #fitness {
-    padding-bottom: 30%;
+    padding-right: 0%;
     width: 40%;
-    height: 15%;
+    height: 30%;
+    justify-self: start;
+    background-size: 90%;
     background-repeat: no-repeat;
 	background-image: url('../images/10fitness.png')
+}
+
+#hunger {
+    padding-bottom: 0%;
+    width: 40%;
+    height: 30%;
+    align-self: end;
+    background-size: 100%;
+    background-repeat: no-repeat;
+	background-image: url('../images/0hunger.png')
+}
+
+#control {
+    padding-top:5%;
+    position:absolute;
+    display: flex;
+    width: 90%;
+    align-items: end;
+    height: 40%;
+    padding-left: 10%;
+    justify-content: space-between;
 }
