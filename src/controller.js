@@ -1,6 +1,17 @@
 (function exportController() {
     function Controller (pet) {
         this.pet = pet;
+
+        document.querySelector('#feed-button').addEventListener('click', () => {
+            this.pet.feedASnack();
+            this.lowerHunger();
+            
+        });
+        document.querySelector('#exercise-button').addEventListener('click', () => {
+            this.pet.PTSession();
+            this.lowerFitness();
+        });
+        
         
 };
 Controller.prototype = {
@@ -59,20 +70,22 @@ Controller.prototype = {
         }, 3000);
     },
 
-initialisePet() {
-const pet = this.pet;
-const intervalGrow = window.setInterval(() => {
-    if(pet.isAlive === false){
-        window.clearInterval(intervalGrow);
+    initialisePet() {
+    const pet = this.pet;
+    const intervalGrow = window.setInterval(() => {
+        
+        console.log('I am growing');
+        this.renderMessage(`Your pet is now ${pet.age} years old!`);
+        pet.growUp();
+        this.lowerFitness();
+        this.lowerHunger();
+        if(pet.isAlive === false){
+            window.clearInterval(intervalGrow);
+            this.renderMessage(`Your pet JUST DROPPED DEAD!`);
+        };
+    }, 5000);
+    },
     };
-    console.log('I am growing');
-    this.renderMessage(`Your pet is now ${pet.age} years old!`);
-    pet.growUp();
-    this.lowerFitness();
-    this.lowerHunger();
-}, 5000);
-},
-};
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = Controller;
     } else {

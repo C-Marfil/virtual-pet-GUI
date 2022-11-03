@@ -6,8 +6,8 @@ html, body {
 
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-flow: column;
+    align-items:center;
     background-color: black;    
 }
 
@@ -19,6 +19,8 @@ body {
     position: relative;
     overflow-x: auto;
     background-size: 100%;
+    display:absolute;
+    flex-flow:column;
     background-repeat:no-repeat;
     background-image: url('../images/petFlat.png');
 }
@@ -31,11 +33,13 @@ body {
 }
 
 #pet {
-    display: flex;
+    display: absolute;
     width: 15%;
     padding-left:40%;
     padding-top:13%;
 }
+
+
 
 #petStart {
     color: pink;
@@ -43,6 +47,7 @@ body {
 
 #message {
  color: white;
+
 }
 
 #fitness {
