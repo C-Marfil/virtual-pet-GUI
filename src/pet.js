@@ -11,6 +11,7 @@ function Pet(name) {
     this.hunger = MINIMUM_HUNGER;
     this.fitness = MAXIMUM_FITNESS;
     this.children = [];
+    this.evolved = false;
 };
 //GETTERS//
 //ISALIVE: Checks states to determine if pet is alive//
@@ -20,6 +21,9 @@ const LIFESPAN = 30;
 Pet.prototype = {
     get isAlive() {
       return this.age < LIFESPAN && this.hunger < MAXIMUM_HUNGER && this.fitness > MINIMUM_FITNESS;
+    },
+    get isEvolved() {
+        return this.evolved = true;
     },
   };
 

@@ -3,16 +3,67 @@
         this.pet = pet;
 
         document.querySelector('#feed-button').addEventListener('click', () => {
+            let getPetImg = document.getElementById('pet');
+
             this.pet.feedASnack();
             this.lowerHunger();
-            
+            if (this.pet.evolved === true) {
+            getPetImg.src = 'images/EvoFood.png';
+            };
+            if (this.pet.evolved === false) {
+            getPetImg.src = 'images/SnackPet.png';
+            };
         });
         document.querySelector('#exercise-button').addEventListener('click', () => {
+            let getPetImg = document.getElementById('pet');
+            
             this.pet.PTSession();
             this.lowerFitness();
+            
+            if (this.pet.evolved === false) {
+            getPetImg.src = 'images/PTPet.png';
+            };
+            if (this.pet.evolved === true) {
+            getPetImg.src = 'images/EvoPT.png';
+            };
         });
-        
-        
+        document.querySelector('#feed-pizza').addEventListener('click', () => {
+            let getPetImg = document.getElementById('pet');
+            
+            this.pet.feedAPizza();
+            this.lowerHunger();
+
+            if (this.pet.evolved === true) {
+            getPetImg.src = 'images/EvoFood.png';
+            };
+            if (this.pet.evolved === false) {
+            getPetImg.src = 'images/PizzaPet.png';
+            };
+        });
+        document.querySelector('#train').addEventListener('click', () => {
+            let getPetImg = document.getElementById('pet');
+            
+            this.pet.walk();
+            this.lowerFitness();
+            
+            if (this.pet.evolved === false) {
+            getPetImg.src = 'images/SportPet.png';
+            };
+            if (this.pet.evolved === true) {
+            getPetImg.src = 'images/EvoPT.png';
+            };
+        });
+        document.querySelector('#evolve').addEventListener('click', () => {
+            let getPetImg = document.getElementById('pet');
+
+            if(this.pet.age < 15) {
+                this.renderMessage(`Your pet is too young!`)
+            };
+            if (this.pet.age >= 15) {
+                getPetImg.src = 'images/Evolution.png';
+                this.pet.isEvolved;
+            };
+        });
 };
 Controller.prototype = {
     lowerFitness() {
@@ -92,21 +143,3 @@ if (typeof module !== 'undefined' && module.exports) {
      window.Controller = Controller;
     };
 }());
-
-
-
-
-
-// const sprites = [
-//     'images/pet.png',
-//     'images/pet0.png',
-// ];
-// let backgroundIndex = 0;
-// const pet = this.pet;
-// const newPetElement = document.createElement('div');
-// const newDivPet = document.querySelector('#divPet');
-// newPetElement.id = 'pet';
-
-// newDivPet.appendChild(newPetElement);
-
-// document.querySelector('#pet').style.backgroundImage = `url('${sprites[backgroundIndex % sprites.length]}')`;
