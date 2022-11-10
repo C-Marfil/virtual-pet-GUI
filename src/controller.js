@@ -74,12 +74,16 @@
 
         document.querySelector('#button-nightmode').addEventListener('click', (event) => {
             const getComputer = document.querySelector('#computer');
+            const getButton = document.querySelector('#button-nightmode');
 
             if(!nightMode) {
                 getComputer.src = `images/nightTimeComputer.png`;
+                getButton.innerHTML = 'ZZZ';
+                
                 nightMode = true;
             } else { 
                 getComputer.src = `images/dayTimeComputer.png`;
+                getButton.innerHTML = 'DAY';
                 nightMode = false;
             };
         });
@@ -147,7 +151,14 @@
             const pet = this.pet;
             let getPetImg = document.getElementById('pet');
             const intervalGrow = window.setInterval(() => {
+                if (pet.age === 1) {
+                this.renderMessage(`Your pet is now ${pet.age} year old!`);
+            } else if (pet.age === 0) {
+                this.renderMessage(`Your pet is ALIVE!`);
+            } 
+            else {
                 this.renderMessage(`Your pet is now ${pet.age} years old!`);
+            }
                 pet.growUp();
                 this.lowerFitness();
                 this.lowerHunger();
