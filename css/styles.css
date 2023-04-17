@@ -189,8 +189,8 @@ body {
     transform: rotate(-10deg);
     background-color: yellow;
     filter: contrast(70%);
-    width: 10vh;
-    height: 10vh;
+    width: 25vh;
+    height: 25vh;
     top: 55vh;
     text-align: center;
     z-index: 1;
