@@ -126,28 +126,28 @@ body {
 }
 
 #button-nightmode {
+  position: absolute;
   font-family: "Press Start 2P", cursive;
-  margin-top: 29.5vw;
   margin-left: 67.5vw;
   height: 15vh;
   width: 25vh;
+  top: 64vh;
   font-size: 6vh;
   color: red;
   background-color: black;
 }
 
 #postit1 {
+  position: absolute;
   display: block;
-  position: relative;
   font-family: "Gochi Hand", cursive;
   transform: rotate(-10deg);
   background-color: yellow;
   filter: contrast(70%);
-  position: absolute;
   width: 20vh;
   height: 20vh;
+  top: 55vh;
   margin-left: 34vw;
   text-align: center;
   z-index: 1;
-  margin-top: 57vh;
 }
