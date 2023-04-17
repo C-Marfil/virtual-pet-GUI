@@ -17,12 +17,10 @@ body {
   margin-left: 2.5vw;
   margin-bottom: 15vh;
   width: 25vw;
-  height: 400vh;
+  height: 100vh;
   position: relative;
   overflow-x: auto;
   background-size: 102%;
-  display: absolute;
-  flex-flow: column;
   background-repeat: no-repeat;
   background-image: url("../images/petFlat.png");
 }
@@ -34,7 +32,6 @@ body {
 }
 
 #pet {
-  display: absolute;
   width: 15%;
   scale: 200%;
   padding-left: 30%;
@@ -150,4 +147,103 @@ body {
   margin-left: 34vw;
   text-align: center;
   z-index: 1;
+}
+
+@media only screen and (max-width: 1275px) {
+  html {
+    background-color: red;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html {
+    background-color: black;
+    width: 100vw;
+  }
+
+  #viewport {
+    position: absolute;
+    filter: sepia(50%);
+    filter: saturate(60%);
+    left: 93vw;
+    width: 80vw;
+    height: 100vh;
+    overflow-x: auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../images/petFlat.png");
+  }
+
+  #computer {
+    position: absolute;
+    height: 100vh;
+    left: 0vw;
+    width: 260vw;
+  }
+
+  #postit1 {
+    position: absolute;
+    display: block;
+    left: 120vw;
+    font-size: 20px;
+    font-family: "Gochi Hand", cursive;
+    transform: rotate(-10deg);
+    background-color: yellow;
+    filter: contrast(70%);
+    width: 25vh;
+    height: 25vh;
+    top: 55vh;
+    text-align: center;
+    z-index: 1;
+  }
+
+  #divMessage {
+    position: absolute;
+    font-family: "Press Start 2P", cursive;
+    font-size: 1.4vh;
+    left: 80vw;
+    width: 80vw;
+    height: 5vh;
+  }
+
+  #button-nightmode {
+    position: absolute;
+    font-family: "Press Start 2P", cursive;
+    height: 13vh;
+    top: 64vh;
+    left: 144vw;
+    font-size: 5vh;
+    color: red;
+    background-color: black;
+  }
+
+  #control {
+    position: absolute;
+    top: 50vh;
+    right: 0vw;
+    z-index: 1;
+    width: 40vh;
+    height: 23vw;
+    }
+
+    #button-pt {
+      left: 84vw;
+    }
+    
+    #button-evo {
+      left: 60vw;
+    }
+    
+    #button-exercise {
+      left: 155vw;
+      top: 77vh;
+    }
+    
+    #button-pizza {
+      left: 110vw;
+    }
+    
+    #button-snack {
+      left: 133vw;
+    }
+  
 }
