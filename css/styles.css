@@ -1,153 +1,153 @@
-
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100vh;
 }
 
 body {
-    display: flex;
-    flex-flow: column;
-    align-items:center;
-    background-color: black;    
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: black;
 }
 
 #viewport {
-    filter:sepia(50%);
-    filter:saturate(60%);
-    margin-top: 10%;
-    margin-left: 2.5%;
-    margin-bottom: 15%;
-    width: 350px;
-    height: 400px;
-    position: relative;
-    overflow-x: auto;
-    background-size: 102%;
-    display:absolute;
-    flex-flow:column;
-    background-repeat:no-repeat;
-    background-image: url('../images/petFlat.png');
+  filter: sepia(50%);
+  filter: saturate(60%);
+  margin-top: 18vh;
+  margin-left: 2.5vw;
+  margin-bottom: 15vh;
+  width: 25vw;
+  height: 400vh;
+  position: relative;
+  overflow-x: auto;
+  background-size: 102%;
+  display: absolute;
+  flex-flow: column;
+  background-repeat: no-repeat;
+  background-image: url("../images/petFlat.png");
 }
 
 #divPet {
-    width:128px;
-    height:64px;
-    position: absolute;
+  width: 128vw;
+  height: 64vh;
+  position: absolute;
 }
 
 #pet {
-    display: absolute;
-    width: 15%;
-    scale: 200%;
-    padding-left:30%;
-    padding-top:13%;
+  display: absolute;
+  width: 15%;
+  scale: 200%;
+  padding-left: 30%;
+  padding-top: 13%;
 }
 
 #petStart {
-    color: pink;
+  color: pink;
 }
 
 #divMessage {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1.8vh;
-    margin-top: 6%;
-    margin-left: 19%;
-    width: 40%;
-    height: 5%;
-    position: absolute;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.8vh;
+  margin-top: 13vh;
+  margin-left: 19vw;
+  width: 40vw;
+  height: 5vh;
+  position: absolute;
 }
 
 #message {
- color: white;
+  color: white;
 }
 
 #fitness {
-    padding-right: 0%;
-    width: 40%;
-    height: 30%;
-    justify-self: start;
-    background-size: 90%;
-    background-repeat: no-repeat;
-	background-image: url('../images/10fitness.png')
+  padding-right: 0%;
+  width: 40vw;
+  height: 30vh;
+  justify-self: start;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-image: url("../images/10fitness.png");
 }
 
 #hunger {
-    padding-bottom: 0%;
-    width: 40%;
-    height: 30%;
-    align-self: end;
-    background-size: 100%;
-    background-repeat: no-repeat;
-	background-image: url('../images/0hunger.png')
+  padding-bottom: 0%;
+  width: 40vw;
+  height: 30vh;
+  align-self: end;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("../images/0hunger.png");
 }
 
 #control {
-    padding-top:0%;
-    position:relative;
-    display: flex;
-    width: 90%;
-    align-items: end;
-    height: 40%;
-    padding-left: 10%;
-    justify-content: space-between;
+  padding-top: 0vh;
+  position: relative;
+  display: flex;
+  width: 30vh;
+  align-items: end;
+  height: 23vw;
+  padding-left: 12.5vh;
+  justify-content: space-between;
 }
 
 #computer {
-    height:100vh;
-    width:165vh;
-    position:absolute;
+  height: 100vh;
+  width: 86vw;
+  position: absolute;
 }
 
 .button {
-    filter:contrast(70%);
-    position:absolute;
-    z-index: 1;
-    margin-top: 35%;
-    scale: 85%;
+  filter: contrast(70%);
+  position: absolute;
+  z-index: 1;
+  top: 75vh;
+  scale: 70%;
 }
 
 #button-pt {
-    padding-right: 20%;
+  left: 37vw;
 }
 
 #button-evo {
-    margin-left: -15.1%;
+  left: 29vw;
 }
 
 #button-exercise {
-    margin-left: 15%;
-    margin-top: 36%;
+  left: 60vw;
+  top: 77vh;
 }
 
 #button-pizza {
-    margin-left: 6.8%;
+  left: 53vw;
 }
 
 #button-snack {
-    padding-right:3%;
+  left: 45vw;
 }
 
 #button-nightmode {
-    font-family: 'Press Start 2P', cursive;
-    margin-top: 31.5%;
-    margin-left: 63%;
-    height: 11vh;
-    width: 20vh;
-    font-size: 6vh;
-    color: red;
-    background-color: black;
+  font-family: "Press Start 2P", cursive;
+  margin-top: 29.5vw;
+  margin-left: 67.5vw;
+  height: 15vh;
+  width: 25vh;
+  font-size: 6vh;
+  color: red;
+  background-color: black;
 }
 
 #postit1 {
-    display:block;
-    position:relative;
-    font-family: 'Gochi Hand', cursive;
-    transform: rotate(-10deg);
-    background-color:yellow;
-    filter:contrast(70%);
-    position:absolute;
-    width:20vh;
-    height:20vh;
-    margin-left:34%;
-    text-align: center;
-    z-index: 1;
-    margin-top: 28%;
+  display: block;
+  position: relative;
+  font-family: "Gochi Hand", cursive;
+  transform: rotate(-10deg);
+  background-color: yellow;
+  filter: contrast(70%);
+  position: absolute;
+  width: 20vh;
+  height: 20vh;
+  margin-left: 34vw;
+  text-align: center;
+  z-index: 1;
+  margin-top: 57vh;
 }

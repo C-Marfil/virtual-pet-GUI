@@ -1,38 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.ss">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.ss" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>My Virtual Pet</title>
   </head>
 
   <body>
-    <p class="button" id="postit1"> 
-        <br>
-        Your pet will die when it reaches the age of 30... 
-        <br>
-        <br>
-        Enjoy it while you can...
+    <p class="button" id="postit1">
+      <br />
+      Your pet will die when it reaches the age of 30...
+      <br />
+      <br />
+      Enjoy it while you can...
     </p>
 
-    <img class="button" id="button-pt" src="./images/button-PT.png" alt="keyboard key that says call a PT">
-    <img class="button" id="button-evo" src="./images/button-evo.png" alt="keyboard key that says Evo">
-    <img class="button" id="button-exercise" src="./images/button-walk.png" alt="keyboard key that says go for a walk">
-    <img class="button" id="button-pizza" src="./images/button-pizza.png" alt="keyboard key that says order a Pizza">
-    <img class="button" id="button-snack" src="./images/button-snack.png" alt="keyboard key that says get a snack">
-    <img id="computer" src="./images/dayTimeComputer.png" alt="pixel style computer containing the virtual pet">
-    
-    <button id="button-nightmode" class="button"> DAY</button>
-    
+    <img
+      class="button"
+      id="button-pt"
+      src="./images/button-PT.png"
+      alt="keyboard key that says call a PT"
+    />
+    <img
+      class="button"
+      id="button-evo"
+      src="./images/button-evo.png"
+      alt="keyboard key that says Evo"
+    />
+    <img
+      class="button"
+      id="button-exercise"
+      src="./images/button-walk.png"
+      alt="keyboard key that says go for a walk"
+    />
+    <img
+      class="button"
+      id="button-pizza"
+      src="./images/button-pizza.png"
+      alt="keyboard key that says order a Pizza"
+    />
+    <img
+      class="button"
+      id="button-snack"
+      src="./images/button-snack.png"
+      alt="keyboard key that says get a snack"
+    />
+    <img
+      id="computer"
+      src="./images/dayTimeComputer.png"
+      alt="pixel style computer containing the virtual pet"
+    />
+
+    <button id="button-nightmode" class="button">DAY</button>
+
     <div id="divMessage"></div>
 
     <div id="viewport">
-      <img id='pet' class="pet" alt='A snow leopard pokemon kind of creature' src="images/pet.png">
+      <img
+        id="pet"
+        class="pet"
+        alt="A snow leopard pokemon kind of creature"
+        src="images/pet.png"
+      />
       <div id="control">
         <div id="fitness"></div>
         <div id="hunger"></div>
@@ -40,23 +80,21 @@
     </div>
 
     <div id="buttons">
-        <button id="feed-button">GRAB A SNACK</button>
-        <button id="exercise-button">CALL YOUR PT!</button>
-        <button id="feed-pizza">ORDER A PIZZA</button>
-        <button id="train">GO FOR A WALK</button>
-        <button id="evolve">EVOLVE YOUR PET!</button>
-      </div>
- 
+      <button id="feed-button">GRAB A SNACK</button>
+      <button id="exercise-button">CALL YOUR PT!</button>
+      <button id="feed-pizza">ORDER A PIZZA</button>
+      <button id="train">GO FOR A WALK</button>
+      <button id="evolve">EVOLVE YOUR PET!</button>
+    </div>
 
     <script src="src/controller.js"></script>
     <script src="src/pet.js"></script>
 
     <script>
-      const pet = new Pet('Fido');
+      const pet = new Pet("Fido");
       const controller = new Controller(pet);
 
       controller.initialisePet();
     </script>
-
   </body>
 </html>

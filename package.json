@@ -18,5 +18,8 @@
   "homepage": "https://github.com/C-Marfil/virtual-pet#readme",
   "devDependencies": {
     "jest": "^29.1.2"
+  },
+  "dependencies": {
+    "prettier": "^2.8.3"
   }
 }
