@@ -150,30 +150,25 @@
 
     initialisePet() {
       const pet = this.pet;
-      let getPetImg = document.getElementById("pet");
-      const intervalGrow = window.setInterval(() => {
-        if (pet.age === 1) {
-          this.renderMessage(`Your pet is now ${pet.age} year old!`);
-        } else if (pet.age === 0) {
-          this.renderMessage(`Your pet is ALIVE!`);
-        } else {
-          this.renderMessage(`Your pet is now ${pet.age} years old!`);
-        }
-
+      const getPetImg = document.getElementById("pet");
+    
+      const intervalGrow = setInterval(() => {
+        const ageMessage = pet.age === 1 ? `Your pet is now ${pet.age} year old!` : `Your pet is now ${pet.age} years old!`;
+        const statusMessage = pet.age === 0 ? 'ALIVE!' : 'JUST DROPPED DEAD!';
+        this.renderMessage(`Your pet ${ageMessage} ${pet.isAlive ? '' : statusMessage}`);
+    
         pet.growUp();
         this.lowerFitness();
         this.lowerHunger();
-
-        if (pet.isAlive === false) {
-          window.clearInterval(intervalGrow);
+    
+        if (!pet.isAlive) {
+          clearInterval(intervalGrow);
           getPetImg.src = "images/death.png";
-          this.renderMessage(`Your pet JUST DROPPED DEAD!`);
           getPetImg.style.width = "40%";
         }
       }, 5000);
     }
-  }
-
+    }
 
   if (typeof module !== "undefined" && module.exports) {
     module.exports = Controller;
