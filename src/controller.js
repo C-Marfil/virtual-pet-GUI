@@ -82,7 +82,6 @@
           if (!nightMode) {
             getComputer.src = `images/nightTimeComputer.png`;
             getButton.innerHTML = "ZZZ";
-
             nightMode = true;
           } else {
             getComputer.src = `images/dayTimeComputer.png`;
@@ -91,28 +90,29 @@
           }
         });
     }
+    
     lowerFitness() {
       const getFitness = document.getElementById("fitness");
-      let getFitnessStyle = getFitness.style;
-
-      if (this.pet.fitness === 10) {
-        getFitnessStyle.backgroundImage = `url('../images/10fitness.png')`;
+      const getFitnessStyle = getFitness.style;
+      const { fitness, isAlive } = this.pet;
+    
+      const fitnessImages = {
+        10: `url('../images/10fitness.png')`,
+        7: `url('../images/7fitness.png')`,
+        4: `url('../images/4fitness.png')`,
+        1: `url('../images/1fitness.png')`,
+      };
+    
+      if (fitnessImages[fitness]) {
+        getFitnessStyle.backgroundImage = fitnessImages[fitness];
       }
-      if (this.pet.fitness === 7) {
-        getFitnessStyle.backgroundImage = `url('../images/7fitness.png')`;
-      }
-      if (this.pet.fitness === 4) {
-        getFitnessStyle.backgroundImage = `url('../images/4fitness.png')`;
-      }
-      if (this.pet.fitness === 1) {
-        getFitnessStyle.backgroundImage = `url('../images/1fitness.png')`;
-      }
-      if (this.pet.isAlive === false) {
+    
+      if (isAlive === false) {
         getFitnessStyle.backgroundImage = `url('../images/death.png')`;
         getFitnessStyle.backgroundSize = "100%";
       }
     }
-
+  
     lowerHunger() {
       const getHunger = document.getElementById("hunger");
       let getHungerStyle = getHunger.style;
