@@ -27,10 +27,10 @@
         this.fitness > MINIMUM_FITNESS
       );
     }
-
     get isEvolved() {
       return (this.evolved = true);
     }
+
     growUp() {
       if (!this.isAlive) {
         throw new Error("Your pet is no longer alive!");
